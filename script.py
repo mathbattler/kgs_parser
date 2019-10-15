@@ -14,11 +14,11 @@ def nick(string_to_search):  # возвращает ник игрока в ст�
 def link_of_sgf_file(string_with_http):
     # возвращает ссылку на sgf файл из таблички, если партия неприватная,
     # иначе возвращает None
-        result = re.split(r'"', str(string_with_http))
-        if (len(result) > 1):
-            return str(result[1])
-        else:
-            return None  # это происходит, если партия приватная
+    result = re.split(r'"', str(string_with_http))
+    if (len(result) > 1):
+        return str(result[1])
+    else:
+        return None  # это происходит, если партия приватная
 
 
 def download_link(link):  # возвращает содержимое по ссылке link
